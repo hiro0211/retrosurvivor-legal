@@ -8,6 +8,8 @@ GitHub Pages（リポジトリ `hiro0211/retrosurvivor-legal`、`main` ブラン
 
 ## 公開 URL
 
+2026-10-19 に下の 7 ページが HTTP 200 を返すことを curl で確認した（Pages: `main` の `/`、HTTPS 強制あり）。
+
 - トップ: https://hiro0211.github.io/retrosurvivor-legal/
 - プライバシーポリシー（日本語）: https://hiro0211.github.io/retrosurvivor-legal/privacy/
 - プライバシーポリシー（英語）: https://hiro0211.github.io/retrosurvivor-legal/privacy/en/
