@@ -8,7 +8,7 @@
   --surface-elevated: #E4DCCB;
   --text-primary: #14121A;
   --text-secondary: #2E2A36;
-  --text-tertiary: #615B6B;
+  --text-tertiary: #514B5C;
   --divider: rgba(20, 18, 26, 0.14);
   --accent: #B8410E;
   --accent-ink: #FFFFFF;
@@ -186,6 +186,7 @@ section.legal h2 .num {
   font-size: 15px;
 }
 section.legal h3 { margin: 24px 0 6px; font-size: 17px; }
+h1, h2, h3 { text-wrap: balance; word-break: auto-phrase; }
 section.legal p,
 section.legal li { color: var(--text-secondary); font-size: 15.5px; }
 section.legal ul,
@@ -325,4 +326,29 @@ th { background: var(--surface); color: var(--text-primary); }
   .hero { padding: 22px 18px; }
   section.legal h2 { font-size: 19px; }
   .toc { padding: 16px 18px; }
+
+  /* 表はスマホでは行ごとのカードにする */
+  .table-wrap { overflow-x: visible; }
+  table { min-width: 0; }
+  thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  tbody tr {
+    display: block;
+    margin: 0 0 12px;
+    border: 1px solid var(--divider);
+    border-radius: var(--radius);
+    background: var(--surface);
+  }
+  tbody td {
+    display: block;
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--divider);
+  }
+  tbody td:last-child { border-bottom: none; }
+  tbody td::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-tertiary);
+  }
 }
